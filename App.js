@@ -4,7 +4,51 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+
+      <View style={styles.appbar}>
+        <View>
+          <Text>MEMOT</Text>
+        </View>
+      </View>
+
+      <View style={styles.memoList}>
+        <View style={styles.memoListItem}>
+          <Text style={styles.memoTitle}>講座のアイデア</Text>
+          <Text style={styles.memoDate}>2017/10/10</Text>
+        </View>
+      </View>
+
+      <View style={styles.memoList}>
+        <View style={styles.memoListItem}>
+          <Text style={styles.memoTitle}>講座のアイデア</Text>
+          <Text style={styles.memoDate}>2017/10/10</Text>
+        </View>
+      </View>
+
+      <View style={styles.memoList}>
+        <View style={styles.memoListItem}>
+          <Text style={styles.memoTitle}>講座のアイデア</Text>
+          <Text style={styles.memoDate}>2017/10/10</Text>
+        </View>
+      </View>
+
+      <View style={styles.memoList}>
+        <View style={styles.memoListItem}>
+          <Text style={styles.memoTitle}>講座のアイデア</Text>
+          <Text style={styles.memoDate}>2017/10/10</Text>
+        </View>
+      </View>
+
+      <View style={styles.memoList}>
+        <View style={styles.memoListItem}>
+          <Text style={styles.memoTitle}>講座のアイデア</Text>
+          <Text style={styles.memoDate}>2017/10/10</Text>
+        </View>
+      </View>
+
+      <View>
+        <Text>+</Text>
+      </View>
     </View>
   );
 }
