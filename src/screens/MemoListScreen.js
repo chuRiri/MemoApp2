@@ -9,21 +9,9 @@ import CircleButton from '../elements/CircleButton';
 class MemoListScreen extends React.Component {
   // eslint-disable-next-line
   handlePress() {
-    const db = firebase.firestore();
-    const { params } = this.props.navigation.state;
-    // db.settings({ timestampsInSnapshots: true });
-    // db.collection(`users/${params.currentUser.uid}/memos`).add({
+    // const db = firebase.firestore();
     const { currentUser } = firebase.auth();
-    db.collection(`users/${currentUser.uid}/memos`).add({
-      body: 'Hello',
-      createdOn: '2017-12-12',
-    })
-      .then((docRef) => {
-        console.log(docRef.id);
-      })
-      .catch((error) => {
-        console.log(eeror);
-      });
+    this.props.navigation.navigate('MemoCreate', { currentUser: currentUser.uid });
   }
 
   render() {
