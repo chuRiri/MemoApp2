@@ -50,6 +50,7 @@ class MemoEditScreen extends React.Component {
           value={this.state.body}
           onChangeText={(text) => { this.setState({ body: text }); }}
           textAlignVertical="top"
+          returnKeyType="done"
         />
         <CircleButton
           name="check"
