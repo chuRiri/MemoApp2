@@ -16,17 +16,13 @@ class MemoListScreen extends React.Component {
     const { currentUser } = firebase.auth();
     const db = firebase.firestore();
     db.collection(`users/${currentUser.uid}/memos`)
-      .get()
-      .then((snapshot) => {
-        const tempList = [];
+      .onSnapshot((snapshot) => {
+        const memoList = [];
         snapshot.forEach((doc) => {
-          tempList.push({ ...doc.data(), key: doc.id });
-        })
-        this.setState({ memoList: tempList });
-      })
-      .catch((error) => {
-        console.log(error);
-      })
+          memoList.push({ ...doc.data(), key: doc.id });
+        });
+        this.setState({ memoList });
+      });
   }
 
   handlePress() {
